@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
+
+  
 function ToDoItem ( props ) {
-    const [ item, setItem ] = useState( "" );
-
-    function handleChange () {
-        setItem()
-    }
-    
     return (
-         <li onClick={handleChange} value={props.text}>{ props.text }</li>
+        <div onClick={ () => {
+            props.onChecked( props.id );
+        }}>
+            <li>{ props.text }</li>
+        </div>
     )
 }
 

@@ -8,7 +8,7 @@ function App () {
 
   function addItem (inputText) {
     setItems( ( prevItems ) => {
-      return [ ...prevItems, inputText ];
+      return [ ...prevItems, inputText];
     } )
  }
 
